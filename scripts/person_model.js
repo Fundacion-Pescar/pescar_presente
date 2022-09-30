@@ -6,13 +6,13 @@ class Persona {
         this.address = address
     }
     getData(...data){
-        data.forEach( d => { return persona[d] }
+        data.forEach( d => { return this[d] }
         )
     }
     setData(...data){
         data.forEach( (d,i) => {
-            let otro_array = ['name','email','doc']
-            this.persona[otro_array[i]] = d
+            let params = ['name','email','doc']
+            this[params[i]] = d
         })
     }
 }
