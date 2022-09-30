@@ -1,0 +1,19 @@
+:root{
+    /* Colores */
+    --primary: #448;
+    --secondary: #c36;
+    --light: #eee;
+    --dark: #333;
+    --success: #284;
+    --warning: #da3;
+    --danger: #c33;
+    --info: #36e;
+    /* Tamaños */
+    --small: 200px;
+    --medium: 400px;
+    --big: 600px;
+    /* Tipografica */
+    --small-font: 2rem;
+    --large-font: 5rem;
+    --font: 'Roboto', 'Poppins', 'Raleway', sans-serif;
+}
