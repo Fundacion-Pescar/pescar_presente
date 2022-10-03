@@ -1,29 +1,29 @@
-class Persona {
-    constructor(name, doc, email, address){
-        this.name = name;
-        this.doc = doc;
-        this.email = email,
-        this.address = address
+class Aplicacion {
+    // Atributos
+    id;
+    // Metodos()
+    get(...args){
+        args.forEach( arg => this[arg] )   
     }
-    getData(...data){
-        data.forEach( d => { return this[d] }
-        )
+    set(...args){
+        args.forEach( (arg,i) => this[Object.keys(this)[i]] = arg )   
     }
-    setData(...data){
-        data.forEach( (d,i) => {
-            let params = ['name','email','doc']
-            this[params[i]] = d
-        })
+    put(prop,arg){
+        this[prop] = arg;
+    }
+    del(prop){
+        this[prop] = undefined;
     }
 }
-
-
-class Alumno extends Persona{
-    constructor(centro, curso, dias, horas){
-        super(...arguments);
-        this.centro = centro;
-        this.curso = curso;
-        this.dias = dias;
-        this.horas = horas;
-    }
+class Persona extends Aplicacion{
+    name;
+    document;
+    email;
+    address;
+}
+export class Alumno extends Persona{
+    centro;
+    curso;
+    dias;
+    horas;
 }
