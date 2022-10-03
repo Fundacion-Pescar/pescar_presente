@@ -15,6 +15,54 @@
 
     <!-- contenido -->
 
+
+    <!-- EXPRESIONES REGULARES
+
+        <h2>Caracteres Especiales</h2>
+        <ul>
+            <li><strong>\w:</strong>Alfanumericos</li>
+            <li><strong>\W:</strong>NO Alfanumericos</li>
+            <li><strong>\d:</strong>Digitos</li>
+            <li><strong>\D:</strong>NO Digitos</li>
+            <li><strong>\s:</strong>Separacion</li>
+            <li><strong>\S:</strong>NO Separacion</li>
+        </ul>
+        <h2>Caracteres de Cantidad</h2>
+        <ul>
+            <li><strong>{n}</strong> cantidad minima</li>
+            <li><strong>{m,M}</strong>minimo y maximo</li>
+            <li><strong>+</strong>1 o mas coincidencias</li>
+            <li><strong>*</strong>ninguna o varias coincidencias</li>
+        </ul>
+        <h2>Caracteres de Posicion</h2>
+        <ul>
+            <li><strong>^:</strong>la cadena empieza con</li>
+            <li><strong>$:</strong>la cadena termina con</li>
+            <li><strong>\b:</strong>la palabra empieza o termina con</li>
+            <li><strong>\B:</strong>la palabra NO empieza o termina con</li>
+        </ul> 
+    -->
+    <form action="">
+        <h2>Datos del Alumno</h2>
+        <fieldset>  
+            <label for="">Nombre</label>
+            <input 
+                type="text"
+                pattern="\D{3,50}"
+                required>
+            <label for="">Apellido</label>
+            <input 
+                type="text">
+            <label for="">Telefono</label>
+            <input 
+                type="tel"
+                pattern="([0-9]{6,20})|([\(]\d{2,6}[\)]\d{3,6}[\-]\d{3,6})">
+            <label for="">Zip Code</label>
+            <input type="text"
+                pattern="\w{2,4}\d{2,5}">
+        </fieldset>
+        <button>Enviar</button>
+    </form>
     <!-- pie de pagina -->
 
     <!-- Logica JS -->
